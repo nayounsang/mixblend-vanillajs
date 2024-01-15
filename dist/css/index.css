@@ -1,0 +1,68 @@
+body {
+  overflow-x: hidden;
+}
+
+.app {
+  padding: 1.5rem;
+  width: 100%;
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .app {
+    flex-direction: column;
+  }
+}
+
+.radio-group {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: scroll;
+  padding: 0.5rem 0;
+  max-width: 100%;
+}
+
+.file-input-container {
+  padding: 0.5rem 0;
+}
+
+.color-input-container {
+  padding: 0.5rem 0;
+}
+
+.input-article {
+  width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .input-article {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.image-article {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .image-article {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.image-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid #ddd;
+}
