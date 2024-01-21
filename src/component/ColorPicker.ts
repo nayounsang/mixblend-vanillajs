@@ -1,18 +1,13 @@
 import Component from "../base/Component";
 import { store } from "../store/store";
 
-class Radio extends Component<{ name: string }> {
+class ColorPicker extends Component {
   html() {
     return `
-      <label>
-        <input
-          type="radio"
-          name="name"
-          value="${this.props.name}"
-          autocomplete="off"
-        />
-        ${this.props.name}
-      </label>
+    <label>
+      <input type="color">
+      글자 색을 선택해주세요.
+    </label>
     `;
   }
   event() {
@@ -24,9 +19,9 @@ class Radio extends Component<{ name: string }> {
     }
     input.addEventListener("change", (event: Event) => {
       const tar = event.target as HTMLInputElement;
-      store.setState({ name: tar.value });
+      store.setState({ color: tar.value });
     });
   }
 }
 
-export default Radio;
+export default ColorPicker;

@@ -1,12 +1,11 @@
 {
-    "compilerOptions": {
-        "jsx": "preserve",
-        "target": "es5",
-        "module": "ESNext",
-        "lib": ["dom", "es2015"],
-        "rootDir": "./",
-        "moduleResolution": "Node",
-        "strict": true,
-        
-    }
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["dom", "es2015"],
+    "rootDir": "./",
+    "moduleResolution": "Node",
+    "strict": true,
+  },
+  "include": ["./"]
 }

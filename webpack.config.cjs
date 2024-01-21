@@ -1,4 +1,4 @@
-path = require("path")
+path = require("path");
 
 module.exports = {
   mode: "production",
@@ -7,8 +7,16 @@ module.exports = {
     rules: [
       {
         test: /\.ts?$/,
-        use: "ts-loader",
         exclude: /node_modules/,
+        use: [
+          { loader: "ts-loader" },
+          // {
+          //   loader: "babel-loader",
+          //   options: {
+          //     presets: ["@babel/preset-env", "@babel/preset-typescript"],
+          //   },
+          // },
+        ],
       },
     ],
   },
