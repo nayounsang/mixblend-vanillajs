@@ -1,4 +1,4 @@
-import ColorPicker from "./component/ColorInput";
+import ColorPicker from "./component/ColorPicker";
 import ImageDiv from "./component/ImageDiv";
 import ImageInput from "./component/ImageInput";
 import Radio from "./component/Radio";
@@ -24,8 +24,8 @@ const data = [
   "plus-lighter",
 ];
 data.forEach((e) => {
-  Radio(e, "radio-group");
+  new Radio("radio-group-container", e, { name: e }).init();
 });
-ImageInput("file-input-container");
-ColorPicker("color-input-container");
-ImageDiv("image-article");
+new ImageInput("file-input-container", "image").init();
+new ColorPicker("color-input-container", "input").init();
+new ImageDiv("image-article","image").init()

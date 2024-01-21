@@ -19,7 +19,7 @@ body {
   }
 }
 
-.radio-group {
+.radio-group-container {
   display: flex;
   gap: 2.5rem;
   overflow-x: scroll;
