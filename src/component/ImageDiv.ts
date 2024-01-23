@@ -1,7 +1,7 @@
-import Component from "../base/Component";
+import Component2 from "../base/Component2";
 import { store } from "../store/store";
 
-class ImageDiv extends Component {
+class ImageDiv extends Component2 {
   html() {
     return `<div
       class="image-div"

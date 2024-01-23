@@ -16,8 +16,8 @@ class Component<T = Record<string | number, any>> {
   event() {}
   /**컴포넌트를 랜더 시키는 함수 */
   render() {
-    this.#el.innerHTML = "";
     this.#el.innerHTML = this.html();
+    // this.#el.outerHTML = `<div id="${this.curId}">${this.html()}</div>`
   }
   state() {
 

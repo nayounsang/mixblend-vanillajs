@@ -1,16 +1,15 @@
-import Component from "../base/Component";
+import Component2 from "../base/Component2";
 import { store } from "../store/store";
 
-class ImageInput extends Component {
+class ImageInput extends Component2 {
   html() {
     return `<input type="file" name="image" accept="image/*" />
     `;
   }
   event() {
-    const el = this.getEl();
-    const input = el.querySelector(`input`);
+    const input = this.getEl();
     if (input === null) {
-      console.error(`${this.curId}내부 엘리먼트를 찾을 수 없습니다.`);
+      console.error(`엘리먼트를 찾을 수 없습니다.`);
       return;
     }
     input.addEventListener("change", (event) => {

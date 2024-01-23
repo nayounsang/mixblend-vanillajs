@@ -1,7 +1,7 @@
-import Component from "../base/Component";
+import Component2 from "../base/Component2";
 import { StateType } from "../type/type";
 
-let subscribers:Set<Component> = new Set();
+let subscribers:Set<Component2> = new Set();
 
 export const store = {
   state:{
@@ -9,8 +9,12 @@ export const store = {
     imageURL: "",
     color: "",
   },
-  subscribe(component:Component) {
+  subscribe(component:Component2) {
     subscribers.add(component)
+    console.log(subscribers)
+  },
+  unSubscribe(component:Component2) {
+    subscribers.delete(component)
   }
   ,
   setState(newState: Partial<StateType>) {
@@ -20,5 +24,6 @@ export const store = {
     subscribers.forEach((component)=>{
       component.render()
     })
+    console.log('rerender!')
   },
 };
