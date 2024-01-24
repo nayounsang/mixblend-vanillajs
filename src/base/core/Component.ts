@@ -5,7 +5,7 @@ class Component<T = Record<string | number, any>> {
   #el: HTMLElement = document.createElement("div");
   constructor(parentId: string, curId: string, props: T = {} as T) {
     this.parentId = parentId;
-    this.curId = `${parentId}--${curId}`;
+    this.curId = `${parentId}-${curId}`;
     this.props = props;
   }
   /**해당 컴포넌트 내부의 html템플릿 */
@@ -16,12 +16,9 @@ class Component<T = Record<string | number, any>> {
   event() {}
   /**컴포넌트를 랜더 시키는 함수 */
   render() {
-    this.#el.innerHTML = "";
     this.#el.innerHTML = this.html();
   }
-  state() {
-
-  }
+  state() {}
   /**초기화시 실행 */
   init() {
     const parent = document.getElementById(this.parentId);
@@ -31,7 +28,7 @@ class Component<T = Record<string | number, any>> {
     }
     this.#el.id = this.curId;
     parent.appendChild(this.#el);
-    this.state()
+    this.state();
     this.render();
     this.event();
   }

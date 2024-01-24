@@ -1,4 +1,4 @@
-import Component from "../base/Component";
+import Component from "../base/core/Component";
 import { store } from "../store/store";
 
 class ImageInput extends Component {
@@ -7,8 +7,7 @@ class ImageInput extends Component {
     `;
   }
   event() {
-    const el = this.getEl();
-    const input = el.querySelector(`input`);
+    const input = this.getEl();
     if (input === null) {
       console.error(`${this.curId}내부 엘리먼트를 찾을 수 없습니다.`);
       return;

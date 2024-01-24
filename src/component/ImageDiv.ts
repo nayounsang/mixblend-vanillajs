@@ -1,4 +1,4 @@
-import Component from "../base/Component";
+import Component from "../base/core/Component";
 import { store } from "../store/store";
 
 class ImageDiv extends Component {

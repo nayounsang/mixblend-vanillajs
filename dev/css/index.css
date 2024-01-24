@@ -1,0 +1,80 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  
+}
+
+@media screen and (max-width: 700px) {
+  .app {
+    flex-direction: column;
+  }
+}
+
+.radio-group-container {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: scroll;
+  padding: 0.5rem 0;
+  max-width: 100%;
+}
+
+.file-input-container {
+  padding: 0.5rem 0;
+}
+
+.color-input-container {
+  padding: 0.5rem 0;
+}
+
+.input-article {
+  width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .input-article {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.image-article {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .image-article {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.image-div {
+  display: flex;
+  align-items: center;
+  
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 700px) {
+  .image-div {
+    height: 200px;
+    width: 200px;
+  }
+}

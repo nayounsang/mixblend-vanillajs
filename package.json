@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "description": "mix-blend",
   "scripts": {
-    "start": "webpack --watch",
-    "build": "tsc -p src/tsconfig.json --noEmit && webpack"
+    "start": "webpack --watch --mode=development",
+    "build": "tsc -p src/tsconfig.json --noEmit && webpack --mode=production"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.23.3",

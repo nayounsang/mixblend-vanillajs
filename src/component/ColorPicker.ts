@@ -1,4 +1,4 @@
-import Component from "../base/Component";
+import Component from "../base/core/Component";
 import { store } from "../store/store";
 
 class ColorPicker extends Component {
@@ -12,7 +12,7 @@ class ColorPicker extends Component {
   }
   event() {
     const el = this.getEl();
-    const input = el.querySelector(`label > input`);
+    const input = el.querySelector(`input`);
     if (input === null) {
       console.error(`${this.curId}내부 엘리먼트를 찾을 수 없습니다.`);
       return;

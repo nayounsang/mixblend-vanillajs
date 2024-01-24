@@ -1,3 +1,4 @@
+import Input from "./base/element/input";
 import ColorPicker from "./component/ColorPicker";
 import ImageDiv from "./component/ImageDiv";
 import ImageInput from "./component/ImageInput";
